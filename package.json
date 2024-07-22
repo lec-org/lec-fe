@@ -1,0 +1,15 @@
+{
+  "name": "lec-fe",
+  "version": "1.0.0",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "dev:win": "pnpm --filter lec-studio dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@changesets/cli": "^2.27.7"
+  }
+}
