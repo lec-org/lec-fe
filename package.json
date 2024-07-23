@@ -3,13 +3,18 @@
   "version": "1.0.0",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "dev:win": "pnpm --filter lec-studio dev"
+    "dev:studio": "pnpm --filter lec-studio dev",
+    "dev:design": "pnpm --filter lec-design storybook"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@changesets/cli": "^2.27.7"
+    "@changesets/cli": "^2.27.7",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   }
 }
