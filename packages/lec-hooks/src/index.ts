@@ -1,3 +1,3 @@
 export function hooks() {
-  console.log("hooks");
+	console.log('hooks')
 }

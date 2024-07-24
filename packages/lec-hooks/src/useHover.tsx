@@ -1,13 +1,12 @@
-import { HoverEvents } from "@react-types/shared";
-import { useState } from "react";
+import { HoverEvents } from '@react-types/shared'
+import { useState } from 'react'
 
 interface HoverProps extends HoverEvents {
-  isDisabled: boolean;
+	isDisabled: boolean
 }
 
 const useHover = (props: HoverProps) => {
-  const [isHovered, setIsHovered] = useState(false);
-  
-};
+	const [isHovered, setIsHovered] = useState(false)
+}
 
-export default useHover;
+export default useHover

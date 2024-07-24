@@ -1,20 +1,27 @@
 {
-  "name": "lec-fe",
-  "version": "1.0.0",
-  "scripts": {
-    "preinstall": "npx only-allow pnpm",
-    "dev:studio": "pnpm --filter lec-studio dev",
-    "dev:design": "pnpm --filter lec-design storybook"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "@changesets/cli": "^2.27.7",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  }
+	"name": "lec-fe",
+	"version": "1.0.0",
+	"scripts": {
+		"preinstall": "npx only-allow pnpm",
+		"dev:studio": "pnpm --filter lec-studio dev",
+		"dev:design": "pnpm --filter lec-design storybook"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"devDependencies": {
+		"@changesets/cli": "^2.27.7",
+		"@types/react": "^18.3.3",
+		"@types/react-dom": "^18.3.0",
+		"@typescript-eslint/eslint-plugin": "^7.17.0",
+		"@typescript-eslint/parser": "^7.17.0",
+		"eslint": "8.57.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.2.1",
+		"eslint-plugin-react": "^7.35.0",
+		"prettier": "^3.3.3",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1"
+	}
 }
