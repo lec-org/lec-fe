@@ -13,6 +13,7 @@
 	"dependencies": {},
 	"devDependencies": {
 		"@lec/hooks": "workspace:*",
+		"@lec/styles": "workspace: *",
 		"react": "*",
 		"react-dom": "*",
 		"@types/react": "*",

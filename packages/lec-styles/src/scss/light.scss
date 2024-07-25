@@ -1,0 +1,6 @@
+$placeholder: #999;
+$placeholder-standard: blue;
+:root[dark], .force-light {
+  --placeholder: $placeholder;
+  --placeholder-standard: $placeholder-standard;
+}

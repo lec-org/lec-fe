@@ -28,7 +28,8 @@
     "zustand": "^4.5.4",
     "@lec/design": "workspace:*",
     "@lec/charts": "workspace:*",
-    "@lec/hooks": "workspace:*"
+    "@lec/hooks": "workspace:*",
+    "@lec/styles": "workspace:*"
   },
   "devDependencies": {
     "@electron-toolkit/eslint-config-prettier": "^2.0.0",
