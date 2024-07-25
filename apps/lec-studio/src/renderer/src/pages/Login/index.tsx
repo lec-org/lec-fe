@@ -1,6 +1,6 @@
 import formatAccount from "@renderer/utils/formatAccount"
 import { useState } from "react"
-
+import {Input} from '@lec/design'
 const Login = () => {
   const [account, setAccount] = useState<string>("")
   const formatLoginAccount = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -15,7 +15,7 @@ const Login = () => {
       <div className="ipt-container">
         <label className="account">
           <span>Account</span>
-          <input type="text" placeholder="请输入账号 手机/邮箱/用户名" onChange={formatLoginAccount} value={account}/>
+          <Input value={account} onChange={formatLoginAccount} placeholder="请输入账号 手机/邮箱/用户名"/>
         </label>
       </div>
     </div>

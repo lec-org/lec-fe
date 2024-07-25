@@ -1,29 +1,33 @@
 {
-  "name": "@lec/design",
-  "version": "1.0.0",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@lec/hooks": "workspace:*"
-  },
-  "devDependencies": {
-    "@chromatic-com/storybook": "1.6.1",
-    "@storybook/addon-essentials": "^8.2.5",
-    "@storybook/addon-interactions": "^8.2.5",
-    "@storybook/addon-links": "^8.2.5",
-    "@storybook/addon-onboarding": "^8.2.5",
-    "@storybook/blocks": "^8.2.5",
-    "@storybook/react": "^8.2.5",
-    "@storybook/react-vite": "^8.2.5",
-    "@storybook/test": "^8.2.5",
-    "prop-types": "15.8.1",
-    "storybook": "^8.2.5"
-  }
+	"name": "@lec/design",
+	"version": "1.0.0",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"storybook": "storybook dev -p 6006",
+		"build-storybook": "storybook build"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {},
+	"devDependencies": {
+		"@lec/hooks": "workspace:*",
+		"react": "*",
+		"react-dom": "*",
+		"@types/react": "*",
+		"@types/react-dom": "*",
+		"sass": "*",
+		"@chromatic-com/storybook": "1.6.1",
+		"@storybook/addon-essentials": "^8.2.5",
+		"@storybook/addon-interactions": "^8.2.5",
+		"@storybook/addon-links": "^8.2.5",
+		"@storybook/addon-onboarding": "^8.2.5",
+		"@storybook/blocks": "^8.2.5",
+		"@storybook/react": "^8.2.5",
+		"@storybook/react-vite": "^8.2.5",
+		"@storybook/test": "^8.2.5",
+		"prop-types": "15.8.1",
+		"storybook": "^8.2.5"
+	}
 }
