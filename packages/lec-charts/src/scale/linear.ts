@@ -1,3 +1,4 @@
+// * 连续比例尺 Linear Scale
 import { ceil, floor, nice, normalize, round, ticks, tickStep } from './utils'
 
 interface LinearProps {
@@ -8,7 +9,7 @@ interface LinearProps {
 export function createLinear(props: LinearProps) {
 	const { domain, range, interpolate = interpolateNumber } = props
 
-	const [d0, d1] = domain
+	let [d0, d1] = domain
 	const [r0, r1] = range
 
 	const scale = (x: number) => {
@@ -25,11 +26,8 @@ export function createLinear(props: LinearProps) {
 			ceil: (x: number) => ceil(x, step),
 		})
 	}
-	return (x: number) => {
-		const t = normalize(x, d0, d1)
 
-		return interpolate(t, r0, r1)
-	}
+	return scale
 }
 
 export function interpolateNumber(

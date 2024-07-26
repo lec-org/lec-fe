@@ -60,3 +60,33 @@ export function ceil(value: number, base: number) {
 export function floor(value: number, base: number) {
 	return base * Math.floor(value / base)
 }
+
+export function equal(base: any, value: any) {
+	return JSON.stringify(a) === JSON.stringify(b)
+}
+
+export interface BrandOptions {
+	domain: Array<number | string | any>
+	range: [number, number]
+	padding: number
+}
+export interface BrandResult {
+	step: number
+	bandWith: number
+	bandRange: Array<number>
+}
+
+export function brand({ domain, range, padding }: BrandOptions): BrandResult {
+	const [min, max] = range
+	const len = domain.length
+	const step = (max - min) / (len + padding)
+	const bandWith = step * (1 - padding)
+	const interval = step - bandWith
+	const fn = (_, index) => min + interval + step * index
+
+	return {
+		step,
+		bandWith,
+		bandRange: new Array(len).fill(0).map(fn),
+	}
+}
