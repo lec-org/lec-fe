@@ -1,4 +1,4 @@
-import { normalize, tickStep } from '../renderer/utils'
+import { ceil, floor, nice, normalize, round, ticks, tickStep } from './utils'
 
 interface LinearProps {
 	domain: [number, number]
@@ -11,6 +11,20 @@ export function createLinear(props: LinearProps) {
 	const [d0, d1] = domain
 	const [r0, r1] = range
 
+	const scale = (x: number) => {
+		const t = normalize(x, d0, d1)
+
+		return interpolate(t, r0, r1)
+	}
+
+	scale.ticks = (count: number) => ticks(d0, d1, count)
+	scale.nice = (ticksCount: number) => {
+		const step = tickStep(d0, d1, ticksCount)
+		;[d0, d1] = nice([d0, d1], {
+			floor: (x: number) => floor(x, step),
+			ceil: (x: number) => ceil(x, step),
+		})
+	}
 	return (x: number) => {
 		const t = normalize(x, d0, d1)
 
@@ -56,8 +70,4 @@ export function simpleTicks(min: number, max: number, count: number) {
 	})
 
 	return ticks
-}
-
-export function round(n: number): number {
-	return Math.round(n * 1e12) / 1e12
 }
