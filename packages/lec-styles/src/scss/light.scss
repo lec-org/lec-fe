@@ -1,6 +1,12 @@
-$placeholder: #999;
-$placeholder-standard: blue;
-:root[dark], .force-light {
-  --placeholder: $placeholder;
-  --placeholder-standard: $placeholder-standard;
+$color-primary: #2775b6;
+$color-secondary: #4590c5;
+$color-tertiary: #68aad3;
+$color-quaternary: #8fc5e2;
+$color-quinary: #b9dff0;
+
+:root[light] {
+	--color-primary: $color-primary;
+	--color-secondary: $color-secondary;
+	--color-tertiary: $color-tertiary;
+	--color-quaternary: $color-quaternary;
 }

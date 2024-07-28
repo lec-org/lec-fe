@@ -62,7 +62,7 @@ export function floor(value: number, base: number) {
 }
 
 export function equal(base: any, value: any) {
-	return JSON.stringify(a) === JSON.stringify(b)
+	return JSON.stringify(base) === JSON.stringify(value)
 }
 
 export interface BrandOptions {
@@ -89,4 +89,8 @@ export function brand({ domain, range, padding }: BrandOptions): BrandResult {
 		bandWith,
 		bandRange: new Array(len).fill(0).map(fn),
 	}
+}
+
+export function log(n: number, base: number) {
+	return Math.log(n) / Math.log(base)
 }

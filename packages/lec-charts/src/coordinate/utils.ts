@@ -8,3 +8,9 @@ export function curry(fn) {
 		return curried.bind(null, ...newArgs)
 	}
 }
+
+export const identity = (x) => x
+
+export function compose(...fns) {
+	return fns.reduce((total, cur) => (x) => cur(total(x)), identity)
+}
