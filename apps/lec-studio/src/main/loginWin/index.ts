@@ -1,7 +1,6 @@
 import { is } from '@electron-toolkit/utils'
-import { BrowserWindow, ipcMain } from 'electron'
+import { BrowserWindow } from 'electron'
 import { join } from 'path'
-import { main_openMainWindow } from '../mainWin'
 
 let loginWindow: BrowserWindow | null = null
 export default function createWindow(): void {
@@ -31,7 +30,6 @@ export default function createWindow(): void {
       loginWindow.show()
     }
   })
-
 }
 
 export function closeLoginWindow(): void {
