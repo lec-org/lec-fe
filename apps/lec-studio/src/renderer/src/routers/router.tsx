@@ -1,10 +1,11 @@
 import Home from '@renderer/pages/Home'
 import Login from '@renderer/pages/Login'
+import Main from '@renderer/pages/Main'
 import { createHashRouter, RouteObject } from 'react-router-dom'
 const routes:RouteObject[] =[
   {
     path: '/',
-    element: <Home />
+    element: <Main />
   },
   {
     path: 'login',

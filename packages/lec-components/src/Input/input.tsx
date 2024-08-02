@@ -2,8 +2,8 @@ import React from "react"
 import './input.scss'
 
 interface InputProps {
-	value: string
-	onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+	value?: string
+	onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void
 	placeholder?: string
 	type?: string
 	disabled?: boolean

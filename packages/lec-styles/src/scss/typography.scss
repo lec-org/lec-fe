@@ -1,13 +1,39 @@
-:root {
+/*
+* 字体大小
+*/
+// * 大标题类
+$H1: 32px;
+$H2: 28px;
+$H3: 24px;
+$H4: 20px;
+$H5: 16px;
+$H6: 14px;
+// * 标题类
+$T1: 24px;
+$T2: 20px;
+$T3: 16px;
+// * 正文类
+$Body1: 16px;
+$Body2: 14px;
+// * 按钮类
+$Button: 14px;
+// * 代码类
+$Code: 14px;
 
+/*
+  * 行高
+*/
+$H1Line: 40px;
+/*
+* 字重
+*/
+$Regular: 400;
+$Medium: 500;
+$SemiBold: 600;
+$Bold: 700;
 
-
-
-  /*
-  * 字重
-  */
-  $Regular: 400;
-  $Medium: 500;
-  $SemiBold: 600;
-  $Bold: 700;
+.H1 {
+  font-size: $H1;
+  line-height: $H1Line;
+  font-weight: $Bold;
 }

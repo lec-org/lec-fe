@@ -9,6 +9,8 @@ export default function createWindow(): void {
     width: 300,
     show: false,
     autoHideMenuBar: true,
+    resizable: false,
+    frame: false,
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
       sandbox: false,

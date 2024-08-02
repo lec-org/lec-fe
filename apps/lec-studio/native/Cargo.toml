@@ -14,4 +14,4 @@ crate-type = ["cdylib"]
 
 [dependencies]
 neon = "1"
-cocoa=  "0.24"
+cocoa=  "0.25.0"
