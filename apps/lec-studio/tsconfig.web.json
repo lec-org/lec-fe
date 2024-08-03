@@ -18,7 +18,9 @@
       "@components/*": ["src/renderer/src/components/*"],
       "@utils/*": ["src/renderer/src/utils/*"],
       "@hooks/*": ["src/renderer/src/hooks/*"],
-      "@store/*": ["src/renderer/src/store/*"]
+      "@store/*": ["src/renderer/src/store/*"],
+      "@router/*": ["src/renderer/src/routers/*"],
+      "@constants/*": ["src/renderer/src/constants/*"]
     }
   }
 }
