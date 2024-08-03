@@ -5,8 +5,8 @@ import { join } from 'path'
 let loginWindow: BrowserWindow | null = null
 export default function createWindow(): void {
   loginWindow = new BrowserWindow({
-    height: 500,
-    width: 300,
+    height: 448,
+    width: 320,
     show: false,
     autoHideMenuBar: true,
     resizable: false,

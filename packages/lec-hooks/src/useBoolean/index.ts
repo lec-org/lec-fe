@@ -8,8 +8,8 @@ interface Actions {
 	set: (value: boolean) => void
 }
 function useBoolean(start: boolean = false): [boolean, Actions] {
-	const [state, { toggle, set }] = useToggle(start)
-
+	const [state, { toggle, set }] = useToggle(!!start)
+	console.log('useBoolean', state)
 	const actions = useMemo(() => {
 		const setTrue = () => set(true)
 		const setFalse = () => set(false)
@@ -17,7 +17,7 @@ function useBoolean(start: boolean = false): [boolean, Actions] {
 			setTrue,
 			setFalse,
 			toggle,
-			set
+			set: (val: boolean) => !!val,
 		}
 	}, [])
 

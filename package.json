@@ -4,6 +4,7 @@
 	"scripts": {
 		"preinstall": "npx only-allow pnpm",
 		"dev:studio": "pnpm --filter lec-studio dev",
+		"dev:watchApp": "nodemon",
 		"dev:design": "pnpm --filter lec-design storybook",
 		"dev:charts": "pnpm --filter lec-charts playground",
 		"build:native": "pnpm --filter lec-studio build:native"

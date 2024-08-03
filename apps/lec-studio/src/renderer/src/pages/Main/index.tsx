@@ -1,8 +1,13 @@
+import styles from './index.module.scss'
+import { Content, Side } from './layout'
+
 const Main = () => {
   return (
     <>
-    <div>这是 Main 页面</div>
-      <h1>Hello LEC</h1>
+      <div className={styles['main-container']}>
+        <Side />
+        <Content>out</Content>
+      </div>
     </>
   )
 }

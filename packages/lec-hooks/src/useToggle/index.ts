@@ -21,14 +21,15 @@ function useToggle<S, E>(start: S = false as unknown as S, end?: E) {
 
 		const setStart = () => setValue(start)
 		const setEnd = () => setValue(reverse)
-		const toggle = () => setValue(value === start ? reverse : start)
+		const toggle = () =>
+			setValue((val) => (val === start ? reverse : start))
 		const set = (value: S | E) => setValue(value)
 
 		return {
 			setStart,
 			setEnd,
 			toggle,
-			set
+			set,
 		}
 	}, [])
 

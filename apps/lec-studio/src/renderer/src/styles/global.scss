@@ -1,1 +1,17 @@
-@import "@lec/styles/src/scss/global.scss"
+@import '@lec/styles/src/scss/global.scss';
+$default-gradient-bg-color: linear-gradient(61deg, #ffdee9 0%, #fdfec2 50%, #b5fffc 100%);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+#root {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}

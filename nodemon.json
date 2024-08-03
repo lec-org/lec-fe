@@ -1,0 +1,6 @@
+{
+	"watch": ["/apps/lec-studio/src/main/**/*"],
+	"ext": "ts,js",
+	"delay": "2000",
+	"exec": "pnpm dev:studio"
+}

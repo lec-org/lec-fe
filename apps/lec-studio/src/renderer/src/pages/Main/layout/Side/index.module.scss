@@ -1,0 +1,16 @@
+@import '@styles/global.scss';
+.side-area {
+  background: transparent;
+  margin: 5px;
+  height: calc(100% - 10px);
+  border-radius: 5px;
+  min-width: 150px;
+  &.float {
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffdee9;
+    background-image: linear-gradient(135deg, #ffdee9 0%, #fdfec2 50%, #b5fffc 100%);
+  }
+}
