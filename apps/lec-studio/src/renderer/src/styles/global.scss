@@ -5,6 +5,7 @@ $default-gradient-bg-color: linear-gradient(61deg, #ffdee9 0%, #fdfec2 50%, #b5f
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  user-select: none;
 }
 
 body,

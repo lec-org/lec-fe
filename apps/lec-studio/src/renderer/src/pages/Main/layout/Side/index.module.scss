@@ -1,42 +1,54 @@
 @import '@styles/global.scss';
 .side-area {
-  background: transparent;
-  margin: 5px;
-  height: calc(100% - 10px);
-  border-radius: 5px;
-  min-width: 150px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  &.float {
-    position: absolute;
-    padding: 20px;
-    top: 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #ffdee9;
-    background-image: linear-gradient(135deg, #ffdee9 0%, #fdfec2 50%, #b5fffc 100%);
-  }
+	background: transparent;
+	margin: 5px;
+	height: calc(100% - 10px);
+	border-radius: 5px;
+	min-width: 150px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&.float {
+		position: absolute;
+		padding: 20px;
+		top: 0;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		background-color: #ffdee9;
+		background-image: linear-gradient(
+			135deg,
+			#ffdee9 0%,
+			#fdfec2 50%,
+			#b5fffc 100%
+		);
+	}
 
-  .user-avatar {
-    width: 88px;
-    height: 88px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    background-color: rgb(220, 217, 217);
-  }
+	.user-avatar {
+		width: 88px;
+		height: 88px;
+		border-radius: 50%;
+		margin-bottom: 10px;
+		background-color: rgb(220, 217, 217);
+	}
 
-  .navs-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    margin-left: 10px;
-    user-select: none;
-    .nav-item {
-      cursor: pointer;
-      &:hover {
-        background-color: #b5fffc;
-      }
-    }
-  }
+	.navs-menu {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		width: 100%;
+		margin-left: 10px;
+		user-select: none;
+		.nav-item {
+			cursor: pointer;
+
+			&:hover {
+				background: #fff2;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			}
+
+			&.nav-item-active {
+				background-color: #fff;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			}
+		}
+	}
 }

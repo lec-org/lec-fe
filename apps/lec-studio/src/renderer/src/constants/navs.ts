@@ -1,6 +1,6 @@
 export const navs = [
   {
-    label: '打卡',
+    label: '首页',
     path: '/clock'
   },
   {
