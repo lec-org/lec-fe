@@ -15,7 +15,6 @@ const useInsertCss = (css: { [key: string]: string }) => {
   }
   if (customStyle !== null) {
     customStyle.textContent = `\n:root{\n${text}\n}\n`
-    console.log(customStyle.style)
     document.head.appendChild(customStyle)
   }
 }

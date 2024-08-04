@@ -6,7 +6,6 @@ export default function formatAccount(account: string): string {
     .filter((char) => char !== ' ')
     .join('')
   if (LOOSE_TELEPHONE_NUMBER.test(trim_str) || FUZZY_TELEPHONE_NUMBER.test(trim_str)) {
-    console.log('format phone number')
     const phone = formatPhoneNumber(trim_str)
     console.log(phone)
     return phone
@@ -15,7 +14,6 @@ export default function formatAccount(account: string): string {
 }
 
 function formatPhoneNumber(phone: string) {
-  console.log('format phone number', phone)
   if (phone.length >= 12) return phone.slice(0, 12)
 
   const res_tel = `${phone}`

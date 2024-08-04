@@ -4,4 +4,11 @@
   background-color: transparent;
 
   -webkit-app-region: drag;
+  button,
+  input,
+  select,
+  textarea,
+  a {
+    -webkit-app-region: no-drag;
+  }
 }
