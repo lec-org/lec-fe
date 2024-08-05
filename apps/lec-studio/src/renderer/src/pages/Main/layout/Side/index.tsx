@@ -1,15 +1,22 @@
 import { navs as navs_menu } from '@constants/navs'
 import NavLinkItem from '@renderer/components/NavLinkItem'
-import { useState } from 'react'
+import NavLinkMenu from '@renderer/components/NavLinkMenu'
+import { useEffect, useRef, useState } from 'react'
 import styles from './index.module.scss'
 
 const Side = ({ floatSider }) => {
 	const [activeIndex, setActiveIndex] = useState<number>(0)
-
+	const menuRef = useRef<HTMLDivElement>(null)
 	const handleNavActiveClick = (index: number) => {
 		if (index === activeIndex) return
 		setActiveIndex(index)
 	}
+
+	useEffect(() => {
+		if (menuRef.current) {
+			console.log(menuRef.current.children)
+		}
+	})
 
 	return (
 		<div
@@ -20,12 +27,14 @@ const Side = ({ floatSider }) => {
 			<div className={styles['user-avatar']}>
 				<img></img>
 			</div>
-			<div className={styles['navs-menu']}>
+			<NavLinkMenu
+				className={styles['navs-menu']}
+				defaultUrl={navs_menu[0].path}>
 				{navs_menu.map((nav, index) => (
 					<NavLinkItem
 						className={[
 							styles['nav-item'],
-							activeIndex === index   
+							activeIndex === index
 								? styles['nav-item-active']
 								: '',
 						].join(' ')}
@@ -35,7 +44,7 @@ const Side = ({ floatSider }) => {
 						onClick={() => handleNavActiveClick(index)}
 					/>
 				))}
-			</div>
+			</NavLinkMenu>
 		</div>
 	)
 }

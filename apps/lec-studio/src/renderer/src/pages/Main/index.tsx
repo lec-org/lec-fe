@@ -28,7 +28,7 @@ const Main = () => {
 	return (
 		<>
 			<div className={styles['main-container']}>
-				{showSider && <Side floatSider={floatSider} />}
+				<Side floatSider={floatSider} />
 				<Content showHeader={showHeader}>
 					<Outlet />
 				</Content>
