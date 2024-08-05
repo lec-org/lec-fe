@@ -4,7 +4,7 @@ import NavLinkMenu from '@renderer/components/NavLinkMenu'
 import { useEffect, useRef, useState } from 'react'
 import styles from './index.module.scss'
 
-const Side = ({ floatSider }) => {
+const Side = ({ isFloat, isShow }) => {
 	const [activeIndex, setActiveIndex] = useState<number>(0)
 	const menuRef = useRef<HTMLDivElement>(null)
 	const handleNavActiveClick = (index: number) => {
@@ -22,7 +22,8 @@ const Side = ({ floatSider }) => {
 		<div
 			className={[
 				styles['side-area'],
-				floatSider ? styles['float'] : '',
+				isFloat ? styles['float'] : styles['block'],
+				isShow ? styles['show'] : styles['hide'],
 			].join(' ')}>
 			<div className={styles['user-avatar']}>
 				<img></img>

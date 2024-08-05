@@ -6,29 +6,37 @@ import styles from './index.module.scss'
 import { Content, Side } from './layout'
 
 const Main = () => {
-	const [floatSider, { setTrue: float, setFalse: unFloat }] =
+	const [isShowSiderBar, { setTrue: showIt, setFalse: hideIt }] =
 		useBoolean(false)
 	const [showHeader, { setTrue: show, setFalse: hide }] = useBoolean(true)
-	const showSider = usePageStore((state) => state.isShowSideBar)
-	useEffect(() => {
-		document.addEventListener('mousemove', (e) => {
-			if (e.clientX <= 10) {
-				float()
-			} else {
-				unFloat()
-			}
+	const isFloatSider = usePageStore((state) => state.isFloatSideBar)
+	const setIsFloatSideBar = usePageStore((state) => state.setIsFloatSideBar)
+	const handleMouseMove = (e: MouseEvent) => {
+		if (e.clientX <= 10) {
+			showIt()
+		} else {
+			hideIt()
+		}
 
-			if (e.clientY <= 10) {
-				show()
-			} else {
-				hide()
-			}
-		})
+		if (e.clientY <= 10) {
+			show()
+		} else {
+			hide()
+		}
+	}
+	useEffect(() => {
+		document.addEventListener('mousemove', handleMouseMove)
+		return () => {
+			document.removeEventListener('mousemove', handleMouseMove)
+		}
 	}, [])
 	return (
 		<>
 			<div className={styles['main-container']}>
-				<Side floatSider={floatSider} />
+				<Side
+					isFloat={isFloatSider}
+					isShow={isShowSiderBar}
+				/>
 				<Content showHeader={showHeader}>
 					<Outlet />
 				</Content>
