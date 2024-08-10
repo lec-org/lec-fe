@@ -1,4 +1,5 @@
-import { Cards, Clock, ClockData, Login, Main } from '@renderer/pages'
+import { Cards, Clock, ClockData, DayThings } from '@views/Main/pages'
+import { Login, Main } from '@views/index'
 import { createHashRouter, RouteObject } from 'react-router-dom'
 
 const routes: RouteObject[] = [
@@ -7,6 +8,7 @@ const routes: RouteObject[] = [
 		element: <Main />,
 		children: [
 			{
+				// * 打卡页面
 				path: '/clock',
 				element: <Clock />,
 			},
@@ -16,6 +18,12 @@ const routes: RouteObject[] = [
 				element: <ClockData />,
 			},
 			{
+				// * 日程
+				path: '/schedule',
+				element: <DayThings />,
+			},
+			{
+				// * 抽奖
 				path: '/lottery',
 				element: <Cards />,
 			},

@@ -8,12 +8,6 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	// &.float {
-	// 	position: absolute;
-	// 	padding: 20px;
-	// 	top: 0;
-
-	// }
 
 	&.block {
 		position: relative;
@@ -22,15 +16,17 @@
 	&.float {
 		position: absolute;
 		left: -200px;
-		transition: all 0.3s ease-in-out;
+		transition: all 0.2s ease-in-out;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 		background-color: #ffdee9;
+    padding: 10px;
 		background-image: linear-gradient(
 			135deg,
 			#ffdee9 0%,
 			#fdfec2 50%,
 			#b5fffc 100%
 		);
+
 		&:hover {
 			left: 0;
 		}

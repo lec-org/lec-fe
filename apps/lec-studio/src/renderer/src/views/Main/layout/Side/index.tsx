@@ -1,10 +1,12 @@
 import { navs as navs_menu } from '@constants/navs'
 import NavLinkItem from '@renderer/components/NavLinkItem'
 import NavLinkMenu from '@renderer/components/NavLinkMenu'
+import usePageStore from '@renderer/stores/pages'
 import { useEffect, useRef, useState } from 'react'
 import styles from './index.module.scss'
 
 const Side = ({ isFloat, isShow }) => {
+	const toggleSideBarFloat = usePageStore((state) => state.toggleSideBarFloat)
 	const [activeIndex, setActiveIndex] = useState<number>(0)
 	const menuRef = useRef<HTMLDivElement>(null)
 	const handleNavActiveClick = (index: number) => {
@@ -25,6 +27,9 @@ const Side = ({ isFloat, isShow }) => {
 				isFloat ? styles['float'] : styles['block'],
 				isShow ? styles['show'] : styles['hide'],
 			].join(' ')}>
+			<div className={styles['action-bar']}>
+				<button onClick={toggleSideBarFloat}>toggle sider</button>
+			</div>
 			<div className={styles['user-avatar']}>
 				<img></img>
 			</div>

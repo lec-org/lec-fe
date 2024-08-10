@@ -1,26 +1,27 @@
 {
-  "extends": "@electron-toolkit/tsconfig/tsconfig.web.json",
-  "include": [
-    "src/renderer/src/env.d.ts",
-    "src/renderer/src/**/*",
-    "src/renderer/src/**/*.tsx",
-    "src/renderer/src/**/**/*.tsx",
-    "src/preload/*.d.ts"
-  ],
-  "compilerOptions": {
-    "esModuleInterop": true,
-    "composite": true,
-    "jsx": "react-jsx",
-    "baseUrl": ".",
-    "paths": {
-      "@renderer/*": ["src/renderer/src/*"],
-      "@styles/*": ["src/renderer/src/styles/*"],
-      "@components/*": ["src/renderer/src/components/*"],
-      "@utils/*": ["src/renderer/src/utils/*"],
-      "@hooks/*": ["src/renderer/src/hooks/*"],
-      "@store/*": ["src/renderer/src/store/*"],
-      "@router/*": ["src/renderer/src/routers/*"],
-      "@constants/*": ["src/renderer/src/constants/*"]
-    }
-  }
+	"extends": "@electron-toolkit/tsconfig/tsconfig.web.json",
+	"include": [
+		"src/renderer/src/env.d.ts",
+		"src/renderer/src/**/*",
+		"src/renderer/src/**/*.tsx",
+		"src/renderer/src/**/**/*.tsx",
+		"src/preload/*.d.ts"
+	],
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"composite": true,
+		"jsx": "react-jsx",
+		"baseUrl": ".",
+		"paths": {
+			"@renderer/*": ["src/renderer/src/*"],
+			"@styles/*": ["src/renderer/src/styles/*"],
+			"@components/*": ["src/renderer/src/components/*"],
+			"@utils/*": ["src/renderer/src/utils/*"],
+			"@hooks/*": ["src/renderer/src/hooks/*"],
+			"@store/*": ["src/renderer/src/store/*"],
+			"@router/*": ["src/renderer/src/routers/*"],
+			"@constants/*": ["src/renderer/src/constants/*"],
+			"@views/*": ["src/renderer/src/views/*"]
+		}
+	}
 }
