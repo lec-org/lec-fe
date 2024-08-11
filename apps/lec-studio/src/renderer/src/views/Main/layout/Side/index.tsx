@@ -27,9 +27,11 @@ const Side = ({ isFloat, isShow }) => {
 				isFloat ? styles['float'] : styles['block'],
 				isShow ? styles['show'] : styles['hide'],
 			].join(' ')}>
+			{/* 顶部操作栏 */}
 			<div className={styles['action-bar']}>
 				<button onClick={toggleSideBarFloat}>toggle sider</button>
 			</div>
+			{/* 用户头像 => 可拓展 「头衔」 「认证」 等信息 */}
 			<div className={styles['user-avatar']}>
 				<img></img>
 			</div>
@@ -46,7 +48,7 @@ const Side = ({ isFloat, isShow }) => {
 						].join(' ')}
 						to={nav.path}
 						label={nav.label}
-						key={index}
+						key={nav.path + index}
 						onClick={() => handleNavActiveClick(index)}
 					/>
 				))}

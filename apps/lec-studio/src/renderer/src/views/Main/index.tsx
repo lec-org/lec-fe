@@ -1,6 +1,5 @@
 import { useMount, useUnMount } from '@lec/hooks/src/effect'
 import usePageStore from '@renderer/stores/pages'
-import { Outlet } from 'react-router-dom'
 import styles from './index.module.scss'
 import { Content, Side } from './layout'
 
@@ -34,9 +33,7 @@ const Main = () => {
 					isFloat={sideBar_isFloat}
 					isShow={sideBar_isShow}
 				/>
-				<Content>
-					<Outlet />
-				</Content>
+				<Content />
 			</div>
 		</>
 	)
