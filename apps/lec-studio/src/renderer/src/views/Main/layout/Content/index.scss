@@ -1,34 +1,27 @@
-// 页面切换过渡动画
+// 页面切换过渡动画 --- 进入
 .page {
 	position: absolute;
-	top: -100%;
 }
-
-// 页面切换过渡动画 --- 进入
 .page-enter {
-	top: 0;
+	position: absolute;
+	opacity: 0;
+	top: -1000px;
 }
 
 // 页面切换过渡动画 --- 进入（被激活）
 .page-enter-active {
-	opacity: 1;
-	transform: scale(1);
-	transition:
-		opacity 300ms,
-		transform 300ms;
+	top: 0;
+	transition: all 0.3s ease-in-out;
 }
 
 // 页面切换过渡动画 --- 离开
 .page-exit {
+	top: 0;
 	opacity: 1;
-	transform: scale(1);
 }
 
 // 页面切换过渡动画 --- 离开（被激活）
 .page-exit-active {
-	opacity: 0;
-	transform: scale(0.9);
-	transition:
-		opacity 300ms,
-		transform 300ms;
+	top: 1000px;
+	transition: all 0.3s ease-in-out;
 }

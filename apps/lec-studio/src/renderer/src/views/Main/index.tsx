@@ -1,4 +1,4 @@
-import { useMount, useUnMount } from '@lec/hooks/src/effect'
+import { useListener } from '@lec/hooks/src/listener'
 import usePageStore from '@renderer/stores/pages'
 import styles from './index.module.scss'
 import { Content, Side } from './layout'
@@ -19,12 +19,7 @@ const Main = () => {
 		}
 	}
 
-	useMount(() => {
-		document.addEventListener('mousemove', handleMouseMove)
-	})
-	useUnMount(() => {
-		document.removeEventListener('mousemove', handleMouseMove)
-	})
+	useListener('mousemove', document, handleMouseMove)
 
 	return (
 		<>

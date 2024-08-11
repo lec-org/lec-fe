@@ -1,14 +1,13 @@
-import useMount from '@lec/hooks/src/useMount'
-import useUnMount from '@lec/hooks/src/useUnMount'
+import { useListener } from '@lec/hooks/src/listener'
 import usePageStore from '@renderer/stores/pages'
 import { useRef } from 'react'
-import { Outlet } from 'react-router-dom'
-import { CSSTransition, SwitchTransition } from 'react-transition-group'
+import { Outlet, useLocation } from 'react-router-dom'
 import SafeHeader from '../SafeHeader'
 import styles from './index.module.scss'
 import './index.scss'
-
 const Content = () => {
+	const location = useLocation()
+
 	const contentRef = useRef<HTMLDivElement>(null)
 	const header_isShow = usePageStore((state) => state.header_isShow)
 	const [showHeader, hideHeader] = usePageStore(
@@ -23,13 +22,9 @@ const Content = () => {
 			hideHeader()
 		}
 	}
-	useMount(() => {
-		contentRef.current?.addEventListener('mousemove', handleMouseMove)
-	})
 
-	useUnMount(() => {
-		contentRef.current?.removeEventListener('mousemove', handleMouseMove)
-	})
+	useListener('mousemove', document, handleMouseMove)
+
 	return (
 		<div
 			ref={contentRef}
@@ -37,18 +32,10 @@ const Content = () => {
 			<div className={styles['content-header']}>
 				<SafeHeader isShow={header_isShow} />
 			</div>
-			{/*// *路由切换动画*/}
-			<SwitchTransition>
-				<CSSTransition
-					key={location.pathname}
-					timeout={300}
-					classNames='page'
-					unmountOnExit>
-					<div className={styles['content-area']}>
-						<Outlet />
-					</div>
-				</CSSTransition>
-			</SwitchTransition>
+
+			<div className={styles['content-area']}>
+				<Outlet />
+			</div>
 		</div>
 	)
 }

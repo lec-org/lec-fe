@@ -2,7 +2,7 @@ import { Cards, Clock, ClockData, DayThings } from '@views/Main/pages'
 import { Login, Main } from '@views/index'
 import { createHashRouter, RouteObject } from 'react-router-dom'
 
-const routes: RouteObject[] = [
+export const _routes: RouteObject[] = [
 	{
 		path: '/',
 		element: <Main />,
@@ -38,5 +38,6 @@ const routes: RouteObject[] = [
 		element: <div>404 Not Found</div>,
 	},
 ]
+
 export const router: ReturnType<typeof createHashRouter> =
-	createHashRouter(routes)
+	createHashRouter(_routes)
