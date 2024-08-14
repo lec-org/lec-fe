@@ -21,7 +21,7 @@ const Login = () => {
 			<div className={styles['img']}>
 				<img
 					src=''
-					alt=''
+					alt='用户头像'
 				/>
 			</div>
 			<div className={styles['ipt-container']}>

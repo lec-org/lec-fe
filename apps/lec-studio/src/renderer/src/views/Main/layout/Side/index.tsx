@@ -4,6 +4,7 @@ import NavLinkMenu from '@renderer/components/NavLinkMenu'
 import usePageStore from '@renderer/stores/pages'
 import { useEffect, useRef, useState } from 'react'
 import styles from './index.module.scss'
+import { Button } from '@lec/design'
 
 const Side = ({ isFloat, isShow }) => {
 	const toggleSideBarFloat = usePageStore((state) => state.toggleSideBarFloat)
@@ -29,7 +30,7 @@ const Side = ({ isFloat, isShow }) => {
 			].join(' ')}>
 			{/* 顶部操作栏 */}
 			<div className={styles['action-bar']}>
-				<button onClick={toggleSideBarFloat}>toggle sider</button>
+				<Button onClick={toggleSideBarFloat} variant='primary'>toggle sider</Button>
 			</div>
 			{/* 用户头像 => 可拓展 「头衔」 「认证」 等信息 */}
 			<div className={styles['user-avatar']}>

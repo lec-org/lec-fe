@@ -15,7 +15,7 @@ const Main = () => {
 		if (e.clientX <= 10) {
 			showSideBar()
 		} else {
-			sideBar_isShow && hideSideBar()
+			hideSideBar()
 		}
 	}
 

@@ -36,14 +36,14 @@ export function getTargetElement<T extends TargetType>(
 	return targetElement
 }
 
-const useListener = (
+const useListener = <E extends Event>(
 	type: string,
 	target: React.RefObject<any> | HTMLElement | Window | Document,
-	handler: (event: Event) => void,
+	handler: (event: E) => void,
 	options?,
 ) => {
 	// * 判断是 ref or Dom, 默认是 window
-	const targetElement = getTargetElement(target.current, window)
+	const targetElement = getTargetElement(target, window)
 
 	useMount(() => {
 		targetElement.addEventListener(type, handler, options)

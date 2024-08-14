@@ -1,13 +1,11 @@
 import { useListener } from '@lec/hooks/src/listener'
 import usePageStore from '@renderer/stores/pages'
 import { useRef } from 'react'
-import { Outlet, useLocation } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import SafeHeader from '../SafeHeader'
 import styles from './index.module.scss'
 import './index.scss'
 const Content = () => {
-	const location = useLocation()
-
 	const contentRef = useRef<HTMLDivElement>(null)
 	const header_isShow = usePageStore((state) => state.header_isShow)
 	const [showHeader, hideHeader] = usePageStore(
