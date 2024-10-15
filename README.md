@@ -46,3 +46,17 @@ lec-fe
 
 -   apps 目录存放的是工作台项目
 -   packages 目录存放的是公共组件、hooks、样式库等
+
+## git速记
+
+```bash
+git checkout -b ur_branch_name # 创建新分支 并切过去
+git branch # 看本地分支
+git branch -a # 看所有分支
+git checkout main # 切回主分支
+git pull # 拉取最新代码
+git push origin ur_branch_name # 推送最新代码到远程仓库
+```
+> 禁止 merge 到 main 分支 !!! 
+> 禁止 push 到 main 分支 !!!
+
