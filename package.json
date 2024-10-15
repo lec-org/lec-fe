@@ -3,7 +3,8 @@
 	"version": "1.0.0",
 	"scripts": {
 		"preinstall": "npx only-allow pnpm",
-		"dev:studio": "pnpm --filter lec-studio dev",
+		"dev:studio": "pnpm --filter @lec/studio dev",
+		"dev:oj": "pnpm --filter @lec/leco dev",
 		"dev:watchApp": "nodemon",
 		"dev:design": "pnpm --filter lec-design storybook",
 		"dev:charts": "pnpm --filter lec-charts playground",

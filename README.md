@@ -32,7 +32,9 @@ pnpm dev:watchApp # 以watch Main 模式启动工作台
 ```
 lec-fe
 ├── apps
-|  └── lec-studio
+|  ├── lec-studio
+|  ├── lecoj
+|  └── lecstudio(新工作台)
 └── packages
    ├── lec-charts
    ├── lec-components
