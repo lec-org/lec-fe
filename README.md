@@ -23,7 +23,7 @@ pnpm i
 
 # 启动项目
 pnpm dev:studio # 启动工作台项目
-
+pnpm dev:oj # 启动 OJ 项目
 pnpm dev:watchApp # 以watch Main 模式启动工作台
 ```
 
