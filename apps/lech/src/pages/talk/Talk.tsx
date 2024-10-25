@@ -1,11 +1,5 @@
-import { useParams } from 'react-router-dom'
-
-const Talk = () => {
-    const { talkTag } = useParams()
-    console.log('param', talkTag)
+export default function Talk() {
     return (
-        <div>Talk : {talkTag} </div>
+        <div>Talk</div>
     )
 }
-
-export default Talk

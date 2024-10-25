@@ -1,7 +1,5 @@
-const Hot = () => {
+export default function Hot() {
     return (
         <div>Hot</div>
     )
 }
-
-export default Hot
