@@ -2,6 +2,7 @@ export const headerNav = [
     { label: '首页', path: '/' },
     { label: '热点', path: '/hot' },
     { label: '话题', path: '/talk'},
+    { label: '专题', path: '/subject' },
     { label: '书房', path: '/book' },
 ]
 

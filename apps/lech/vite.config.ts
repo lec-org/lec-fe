@@ -4,7 +4,11 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react({
+    babel: {
+        presets: ['jotai/babel/preset'],
+      }
+  })],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src")

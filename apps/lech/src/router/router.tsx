@@ -1,17 +1,12 @@
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 import Root from "@/Root.tsx";
-import Home from "@/pages/home/Home.tsx";
 import Book from "@/pages/book/Book";
 import Hot from "@/pages/hot/Hot";
 import NotFound from "@/pages/NotFound";
 import BookList from "@/pages/book/BookList";
 import Session from "@/pages/book/Session";
 import Talk from "@/pages/talk/Talk";
-import Frontend from "@/pages/home/Frontend";
-import Backend from "@/pages/home/Backend";
-import Latest from "@/pages/home/Latest";
-import Follow from "@/pages/home/Follow";
-import WeeklyHot from "@/pages/home/WeeklyHot";
+import { Latest, WeeklyHot, Follow, Frontend, Backend, Home } from "@/pages/home";
 
 const routes: RouteObject[] = [
     {
