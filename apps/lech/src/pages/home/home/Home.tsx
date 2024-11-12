@@ -15,16 +15,6 @@ export default function Home() {
   }
 
   return (
-    <div className={styles["home"]}>
-      <aside className={styles["l-sidebar"]}>
-        <LSide />
-      </aside>
-      <div className={styles["content"]}>
-        <Outlet />
-      </div>
-      <aside className={styles["r-sidebar"]}>
-        <RSide />
-      </aside>
-    </div>
+   <></>
   )
 }
