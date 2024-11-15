@@ -24,7 +24,7 @@
 		"@electron-toolkit/preload": "^3.0.1",
 		"@electron-toolkit/utils": "^3.0.0",
 		"@lec/charts": "workspace:*",
-		"@lec/design": "workspace:*",
+		"@lec/ladon": "workspace:*",
 		"@lec/hooks": "workspace:*",
 		"@lec/styles": "workspace:*",
 		"electron-updater": "^6.2.1",

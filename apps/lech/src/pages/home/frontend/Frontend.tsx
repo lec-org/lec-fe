@@ -1,5 +1,5 @@
 export default function Frontend() {
   return (
-    <div>Frontend</div>
+    <div>前端</div>
   )
 }

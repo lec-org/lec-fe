@@ -22,7 +22,8 @@ export default function NotFound() {
                 clearInterval(timer)
             }
         }
-    }, [counter])
+    }, [counter, navigator])
+
     return (
         <>
             <div>NotFound</div>

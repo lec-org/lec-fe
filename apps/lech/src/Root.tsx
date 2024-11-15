@@ -1,36 +1,41 @@
-import { Outlet, useNavigate } from 'react-router-dom'
-import { sideNav } from './constants/nav'
+/**
+ * 观察掘金发现许多页面都包含了一个header，因此我们将其抽象为一个组件，并在这里使用。 
+ */
+import '@/assets/css/root.css'
+import { subNavRoutes } from './constants/route'
+import { Outlet } from 'react-router-dom'
 
-import styles from '@/root.module.scss'
-import Header from './components/header/Header'
-
-const Root = () => {
-    const navigator = useNavigate()
-    return (
-        <div className={styles['main-container']}>
-            <Header />
-            <div className={styles['content']}>
-                <div className={styles['left-sider']}>
-                    <div className={styles['menu']}>
-                        {
-                            sideNav.map((item, index) => (
-                                <div key={index} className={styles['menu-item']} onClick={()=>navigator(item.path)}>
-                                    <div className={styles['icon']}></div>
-                                    <div className={styles['label']}>{item.label}</div>
-                                </div>
-                            ))
-                        }
-                    </div>
-                    <div className={styles['footer']}>
-                        <div className={styles['theme-switch']}></div>
-                    </div>
+export default function Root() {
+  
+  return (
+    <>
+      <div className="header">
+        <h1>欢迎来到Lech</h1>
+        <p>lec tech stack</p>
+      </div>
+      <main className="container">
+        <div className="index-nav">
+          <nav className="side-navigation-wrap">
+            {
+              subNavRoutes.map((route, index) => (
+              <div 
+                key={index + route.path + route.label}
+                className="nav-item-wrap"
+              >
+                <div className="nav-item-content">
+                  <a href={route.path} className='nav-item'>
+                    <div className="icon"></div>
+                    <div className="nav-item-text">{route.label}</div>
+                  </a>
                 </div>
-                <div className={styles['view']}>
-                    <Outlet />
-                </div>
-            </div>
+              </div>))
+            }
+          </nav>
         </div>
-    )
+        <div className="content">
+          <Outlet />
+        </div>
+      </main>
+    </>
+  )
 }
-
-export default Root

@@ -1,5 +1,5 @@
 export default function Follow() {
   return (
-    <div>Follow</div>
+    <div>关注</div>
   )
 }

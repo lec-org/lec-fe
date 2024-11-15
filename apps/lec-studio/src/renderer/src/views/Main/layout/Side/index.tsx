@@ -4,7 +4,7 @@ import NavLinkMenu from '@renderer/components/NavLinkMenu'
 import usePageStore from '@renderer/stores/pages'
 import { useEffect, useRef, useState } from 'react'
 import styles from './index.module.scss'
-import { Button } from '@lec/design'
+import { Button } from '@lec/ladon'
 
 const Side = ({ isFloat, isShow }) => {
 	const toggleSideBarFloat = usePageStore((state) => state.toggleSideBarFloat)

@@ -1,4 +1,4 @@
-import { Input } from '@lec/design'
+import { Input } from '@lec/ladon'
 import formatAccount from '@renderer/utils/formatAccount'
 import { useState } from 'react'
 import styles from './index.module.scss'
