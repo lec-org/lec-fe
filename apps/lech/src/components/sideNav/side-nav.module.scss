@@ -1,0 +1,44 @@
+.side-navigation-wrap {
+  min-width:  180px;
+  padding: 8px;
+
+  .nav-item-wrap {
+    display: flex;
+    flex-direction: column;
+
+    .nav-item-content {
+      line-height: 24px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      &:hover {
+        background-color: rgba(0,0,0,0.08);
+        color: #1e80ff;
+      }
+
+      &.active {
+        background-color: #eaf2ff;
+        font-weight: 500;
+      }
+
+      .nav-item {
+        display: inline-block;
+        width: 100%;
+        padding: 10px 17px;
+        color: #515767;
+
+        &:hover {
+          color: #1e80ff;
+        }
+
+        &-text {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}

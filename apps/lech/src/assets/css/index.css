@@ -16,3 +16,17 @@ body, html {
   display: flex;
   flex-direction: column;
 }
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  ::placeholder {
+    opacity: 0.54;
+  }
+}
