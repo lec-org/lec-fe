@@ -11,7 +11,7 @@ export default function Header() {
     <header className={styles['main-header']}>
       <div className={styles["container"]}>
         <div className={styles["logo"]}>
-          <div className={styles["logo-content"]}></div>
+          <div className={styles["logo-content"]}>YJY</div>
         </div>
         <nav role='navigation' className={styles['main-nav']}>
           <ul className={styles["nav-list"]}>
