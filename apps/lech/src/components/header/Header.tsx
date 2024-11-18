@@ -3,6 +3,8 @@ import styles from './header.module.scss'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { Search } from '@/components'
+import { Login_register } from '@/components'
+
 export default function Header() {
   const navigator = useNavigate()
   const [activeIndex, setActiveIndex] = useState(0)
@@ -35,6 +37,9 @@ export default function Header() {
             <ul className={styles['right-side-nav']}>
               <li className={styles['search-box']}>
                 <Search />
+              </li>
+              <li>
+                <Login_register />
               </li>
               <li className={styles['nav-item notification']}></li>
               <li className={styles['nav-item menu']}>
