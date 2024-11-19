@@ -1,7 +1,5 @@
 .login-register {
-  display: relative;
-}
-.login-btn {
+  // display: relative;
   display: flex;
   background-color: rgba(30, 128, 255, .05);
   border: 1px solid rgba(30, 128, 255, .3);
@@ -15,13 +13,23 @@
   height: 3rem;
   overflow: hidden;
   align-items: center;
+  
+}
+.login-btn {
+  display: flex;
+  background-color: rgba(30, 128, 255, .05);
   cursor: pointer;
+  border: 0;
 }
 .separate {
   margin: 0 6px
 }
 .register-btn {
-  background-color: var(--juejin-font-brand4-disable);
-  height: 12;
+  // background-color: var(--juejin-font-brand4-disable);
+  // height: 12;
   // width: 12px;
+  display: flex;
+  background-color: rgba(30, 128, 255, .05);
+  cursor: pointer;
+  border: 0;
 }
