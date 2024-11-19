@@ -66,7 +66,7 @@ export default function Modal({
       {/* Modal内容 */}
       <div className={styles['content-wrapper']}>
         <div
-          className={clsx(styles.content, className)}
+          className={className || styles.content}
           onClick={(e) => e.stopPropagation()}
         >
           {children}

@@ -1,0 +1,35 @@
+.login-register {
+  // display: relative;
+  display: flex;
+  background-color: rgba(30, 128, 255, .05);
+  border: 1px solid rgba(30, 128, 255, .3);
+  border-radius: 4px;
+  padding: .3rem 1rem;
+  color: #007fff;
+  line-height:1.5rem;
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: 2rem;
+  height: 3rem;
+  overflow: hidden;
+  align-items: center;
+  
+}
+.login-btn {
+  display: flex;
+  background-color: rgba(30, 128, 255, .05);
+  cursor: pointer;
+  border: 0;
+}
+.separate {
+  margin: 0 6px
+}
+.register-btn {
+  // background-color: var(--juejin-font-brand4-disable);
+  // height: 12;
+  // width: 12px;
+  display: flex;
+  background-color: rgba(30, 128, 255, .05);
+  cursor: pointer;
+  border: 0;
+}
