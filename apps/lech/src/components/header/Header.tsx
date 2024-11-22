@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { Search } from '@/components'
 import { Login_register } from '@/components'
+import Creator from '../creator/Creator'
 
 export default function Header() {
   const navigator = useNavigate()
@@ -37,6 +38,9 @@ export default function Header() {
             <ul className={styles['right-side-nav']}>
               <li className={styles['search-box']}>
                 <Search />
+              </li>
+              <li>
+                <Creator />
               </li>
               <li>
                 <Login_register />

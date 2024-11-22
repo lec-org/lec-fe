@@ -1,0 +1,67 @@
+.creator {
+    margin-right: 15px;
+    // padding: 10px 5px;
+    padding: 8px 12px;
+    height: 40px;
+    span {
+      margin: 0.2px;
+      
+      // cursor: pointer;
+    }
+    .content {
+      position: relative;
+    }
+    .center {
+      color: #fff;
+      font-size: 14px;
+      height: 40px;
+      padding: 8px 12px;
+      background-color: #3297fc;
+      border-radius: 5px 0 0 5px;
+      cursor: pointer;
+    }
+    .pointer {
+      color: #fff;
+      font-size: 14px;
+      height: 40px;
+      padding: 8px 12px;
+      background-color: #3297fc;
+      border-radius:  0 5px 5px 0 ;
+      cursor: pointer;
+    }
+    .tooltip {
+      position: absolute;
+      background-color: #fff;
+      color: #666;
+      width: 300px;
+      height: 80px;
+      padding: 8px 12px;
+      border-radius: 4px;
+      box-sizing: border-box; 
+      border: 1px solid #ccc;
+      font-size: 14px;
+      white-space: nowrap;
+      bottom: -95px;
+      // left: 0;
+      transform: translateX(-50%);
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.3s, visibility 0.3s;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        width: 70px; // 设置每个 span 的宽度为 70px
+        height: 70px; // 设置每个 span 的高度为 70px
+        line-height: 70px; // 设置每个 span 的行高为 70px
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+          color: #3297fc;
+        background-color: #f1f1f1;
+        }
+      }
+    }
+}
