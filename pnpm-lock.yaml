@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       stylus:
         specifier: ^0.63.0
         version: 0.63.0
@@ -333,6 +336,10 @@ importers:
         version: 2.1.6(typescript@5.5.3)
 
   packages/ladon:
+    dependencies:
+      '@lec/hooks':
+        specifier: workspace:*
+        version: link:../lec-hooks
     devDependencies:
       '@chromatic-com/storybook':
         specifier: ^1.9.0
@@ -364,6 +371,9 @@ importers:
       prop-types:
         specifier: ^15.8.1
         version: 15.8.1
+      sass:
+        specifier: ^1.77.8
+        version: 1.77.8
       storybook:
         specifier: ^8.3.6
         version: 8.4.4(prettier@3.3.3)

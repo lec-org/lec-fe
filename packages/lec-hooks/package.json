@@ -1,19 +1,19 @@
 {
-  "name": "@lec/hooks",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "@react-types/shared": "^3.24.0",
-    "@types/react": "*",
-    "@types/react-dom": "*",
-    "react": "*",
-    "react-dom": "*"
-  }
+	"name": "@lec/hooks",
+	"version": "1.0.0",
+	"main": "src/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"devDependencies": {
+		"@react-types/shared": "^3.24.0",
+		"@types/react": "*",
+		"@types/react-dom": "*",
+		"react": "*",
+		"react-dom": "*"
+	}
 }
