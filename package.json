@@ -4,6 +4,7 @@
 	"scripts": {
 		"preinstall": "npx only-allow pnpm",
 		"dev:studio": "pnpm --filter @lec/studio dev",
+		"dev:leome":"pnpm --filter @lec/leome dev",
 		"dev:oj": "pnpm --filter @lec/leco dev",
 		"dev:tech": "pnpm --filter @lec/tech dev",
 		"dev:watchApp": "nodemon",

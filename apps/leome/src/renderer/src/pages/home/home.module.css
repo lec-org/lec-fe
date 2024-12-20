@@ -1,0 +1,51 @@
+.home-page {
+  display: flex;
+  gap: 8px;
+
+  height: 100%;
+}
+
+.left-content {
+  flex: 1;
+  margin-top: 2rem;
+}
+
+.left-framer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.clock-card {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+}
+
+.clock-title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.lock-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.clock-btn {
+  transition-property: all;
+  transition-duration: 0.3s;
+}
+
+.clock-btn-online {
+  width: 33.33%;
+}
+
+.clock-btn-offline {
+  width: 100%;
+}
